@@ -1,0 +1,99 @@
+
+/* Page */
+* {
+  box-sizing:border-box;
+  background-color: #b8dbd9 ;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.navbar .brand-title a {
+  text-decoration: none;
+  font-size: clamp(1.5rem, 3.5vw, 4rem);
+  color: #2f4550;
+  margin: 0.5rem;
+}
+
+.navbar-items ul {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.navbar-items li {
+  list-style: none;
+}
+
+.navbar-items a {
+  text-decoration: none;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #2f4550;
+}
+
+/* SVG Container */
+main {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0rem;
+  
+}
+
+/* SVG Image Styling */
+img {
+  display: block;
+  width: 70vmin;
+}
+
+/* SVG Animated Styling */
+svg {
+  display:block ;
+  width: 70vmin;
+}
+#Text2, #Text1 {
+  fill: rgba(59, 50, 50, 0.911);
+}
+
+#Ellipse1, #Ellipse3 {
+  position: fixed;
+  animation: rotation-right 5s infinite linear ;
+}
+
+#Ellipse2, #Ellipse4 {
+  position: fixed;
+  animation: rotation-left 5s infinite linear ;
+}
+
+/*  transform-origin: center == VERY IMPORTANT for revolving around the "center" of the svg. */
+@keyframes rotation-right { /* Rotates clockwise */
+  from {
+    transform-origin: center;
+    transform:  rotate(0deg);
+  }
+  to {
+    transform-origin: center;
+    transform:  rotate(360deg);
+  }
+}
+
+@keyframes rotation-left { /* Rotates counter-clockwise */
+  from {
+    transform-origin: center;
+    transform:  rotate(0deg);
+  }
+  to {
+    transform-origin: center;
+    transform:  rotate(-360deg);
+  }
+}
